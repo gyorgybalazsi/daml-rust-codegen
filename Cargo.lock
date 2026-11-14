@@ -391,7 +391,7 @@ dependencies = [
 [[package]]
 name = "daml-type-rep"
 version = "0.1.0"
-source = "git+https://github.com/gyorgybalazsi/rust-canton-toolbox?rev=170bbdbcfad857a050b58bebbb182982e81653c0#170bbdbcfad857a050b58bebbb182982e81653c0"
+source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?rev=170bbdbcfad857a050b58bebbb182982e81653c0#170bbdbcfad857a050b58bebbb182982e81653c0"
 dependencies = [
  "chrono",
  "ledger-api",
@@ -812,7 +812,7 @@ checksum = "20870f649af7073d53e38067b2a84312175d56ea15217e1b15bc83506ec50afb"
 [[package]]
 name = "ledger-api"
 version = "0.1.0"
-source = "git+https://github.com/gyorgybalazsi/rust-canton-toolbox?rev=170bbdbcfad857a050b58bebbb182982e81653c0#170bbdbcfad857a050b58bebbb182982e81653c0"
+source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?rev=170bbdbcfad857a050b58bebbb182982e81653c0#170bbdbcfad857a050b58bebbb182982e81653c0"
 dependencies = [
  "base64",
  "chrono",

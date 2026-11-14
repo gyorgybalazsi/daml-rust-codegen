@@ -5,12 +5,12 @@ record, plus the nested records, variants, enums, type aliases, and generic
 types they use, laid out in modules that mirror the Daml packages and modules.
 
 The generated code targets the Canton Ledger API v2 and uses three crates from
-[rust-canton-toolbox](https://github.com/gyorgybalazsi/rust-canton-toolbox):
+[canton-event-graph-syncer](https://github.com/gyorgybalazsi/canton-event-graph-syncer):
 `ledger-api` (gRPC bindings), `daml-type-rep` (Daml built-in types and the
 `LapiAccess` / `ToCreateArguments` traits), and `derive-lapi-access` (the derive
 macros). The toolbox's `test` crate is a worked example of using it.
 
-This project was split out of rust-canton-toolbox, with its history.
+This project was split out of canton-event-graph-syncer (formerly rust-canton-toolbox), with its history.
 
 ## Prerequisites
 
@@ -34,9 +34,9 @@ To use the output, add the crates it depends on to your project:
 
 ```toml
 [dependencies]
-ledger-api = { git = "https://github.com/gyorgybalazsi/rust-canton-toolbox" }
-daml-type-rep = { git = "https://github.com/gyorgybalazsi/rust-canton-toolbox" }
-derive-lapi-access = { git = "https://github.com/gyorgybalazsi/rust-canton-toolbox" }
+ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
+daml-type-rep = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
+derive-lapi-access = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
 serde = { version = "1", features = ["derive"] }
 ```
 
