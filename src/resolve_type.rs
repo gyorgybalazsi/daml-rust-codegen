@@ -458,7 +458,6 @@ mod tests {
     fn test_resolve_type_with_context() {
         let crate_root = std::env::var("CARGO_MANIFEST_DIR").unwrap();
         let dar_path = std::path::PathBuf::from(&crate_root)
-            .join("..")
             .join("_daml")
             .join("daml-nested-test")
             .join("main")

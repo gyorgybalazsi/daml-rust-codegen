@@ -1,0 +1,4 @@
+/target
+**/.daml
+**/log
+**/.DS_Store

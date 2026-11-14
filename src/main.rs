@@ -1,10 +1,10 @@
 use clap::Parser;
-use codegen::codegen::record_struct::generate_rust_code_from_dars;
+use daml_rust_codegen::codegen::record_struct::generate_rust_code_from_dars;
 
 /// Generate Rust types from DAML DAR files.
 #[derive(Parser)]
 #[command(
-    name = "daml-codegen",
+    name = "daml-rust-codegen",
     about = "Generate Rust types from DAML DAR files"
 )]
 struct Cli {

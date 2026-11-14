@@ -1,27 +1,32 @@
 [package]
-name = "codegen"
+name = "daml-rust-codegen"
 version = "0.1.0"
 edition = "2024"
+description = "Generate Rust types from Daml DAR packages for use with the Canton Ledger API"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/gyorgybalazsi/daml-rust-codegen"
+readme = "README.md"
 
 [dependencies]
-prost = {workspace = true}
-zip = {workspace = true}
-anyhow = {workspace = true}
-ledger-api = { path = "../ledger-api" }
-daml-type-rep = { path = "../daml-type-rep" }
-proc-macro2 = {workspace = true}
-quote = {workspace = true}
-syn = {workspace = true}
-prettyplease = {workspace = true}
-tracing = {workspace = true}
-tracing-subscriber = {workspace = true}
-clap = {workspace = true}
+prost = { version = "0.13.5", features = ["derive"] }
+zip = "4.3.0"
+anyhow = "1.0.98"
+# Shared Ledger API bindings and Daml type representations from the toolbox.
+ledger-api = { git = "https://github.com/gyorgybalazsi/rust-canton-toolbox", rev = "170bbdbcfad857a050b58bebbb182982e81653c0" }
+daml-type-rep = { git = "https://github.com/gyorgybalazsi/rust-canton-toolbox", rev = "170bbdbcfad857a050b58bebbb182982e81653c0" }
+proc-macro2 = "1.0.101"
+quote = "1.0.40"
+syn = "2.0.106"
+prettyplease = "0.2.36"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4.5.40", features = ["derive"] }
 
 [build-dependencies]
-prost = {workspace = true}
-prost-build = {workspace = true}
-prost-types = {workspace = true}
-zip = {workspace = true}
+prost = { version = "0.13.5", features = ["derive"] }
+prost-build = "0.13.5"
+prost-types = "0.13.5"
+zip = "4.3.0"
 
 [features]
 no-generated = []

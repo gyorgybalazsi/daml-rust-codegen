@@ -21,7 +21,7 @@ fn main() -> Result<(), Box<dyn error::Error>> {
     Ok(())
 }
 
-/// Reads the desired SDK version from `codegen/daml-sdk-version`,
+/// Reads the desired SDK version from `daml-sdk-version`,
 /// compares it to the installed proto version (stored in OUT_DIR),
 /// and downloads the correct proto if they differ.
 fn ensure_proto_version() -> Result<(), Box<dyn error::Error>> {

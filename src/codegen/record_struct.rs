@@ -545,7 +545,6 @@ mod tests {
         let crate_root = std::env::var("CARGO_MANIFEST_DIR").unwrap();
         info!("Crate root: {}", crate_root);
         let dar_path = std::path::PathBuf::from(&crate_root)
-            .join("..")
             .join("_daml")
             .join("daml-ticketoffer")
             .join("main")
@@ -576,7 +575,6 @@ mod tests {
     fn test_generate_from_nested_dar() {
         let crate_root = std::env::var("CARGO_MANIFEST_DIR").unwrap();
         let dar_path = std::path::PathBuf::from(&crate_root)
-            .join("..")
             .join("_daml")
             .join("daml-nested-test")
             .join("main")

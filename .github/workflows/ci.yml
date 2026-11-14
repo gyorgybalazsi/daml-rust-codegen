@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-test:
+    name: build / test / clippy / fmt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # prost-build needs protoc; build.rs also downloads the Daml-LF protos
+      # for the version in daml-sdk-version when they don't match.
+      - name: Install protoc
+        run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
+
+      # Pinned to match rust-toolchain.toml; keep the two in sync when bumping.
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@1.96.0
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache cargo build
+        uses: Swatinem/rust-cache@v2
+
+      - name: Formatting
+        run: cargo fmt --all --check
+
+      - name: Build
+        run: cargo build --all-targets --locked
+
+      # Compile tests but don't run them: they read DARs built with dpm.
+      - name: Compile tests
+        run: cargo test --no-run --locked
+
+      - name: Clippy
+        run: cargo clippy --all-targets --locked -- -D warnings

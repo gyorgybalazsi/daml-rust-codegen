@@ -300,7 +300,6 @@ mod tests {
     fn test_try_convert_data_types() -> Result<()> {
         let crate_root = std::env::var("CARGO_MANIFEST_DIR").unwrap();
         let dar_path = std::path::PathBuf::from(&crate_root)
-            .join("..")
             .join("_daml")
             .join("daml-ticketoffer")
             .join("main")
