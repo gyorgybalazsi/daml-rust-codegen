@@ -8,7 +8,7 @@ repository = "https://github.com/gyorgybalazsi/daml-rust-codegen"
 readme = "README.md"
 
 [dependencies]
-prost = { version = "0.13.5", features = ["derive"] }
+prost = { version = "0.14.6", features = ["derive"] }
 zip = "4.3.0"
 anyhow = "1.0.98"
 # Shared Ledger API bindings and Daml type representations from the toolbox.
@@ -23,7 +23,7 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 clap = { version = "4.5.40", features = ["derive"] }
 
 [build-dependencies]
-prost = { version = "0.13.5", features = ["derive"] }
+prost = { version = "0.14.6", features = ["derive"] }
 prost-build = "0.13.5"
 prost-types = "0.13.5"
 zip = "4.3.0"
