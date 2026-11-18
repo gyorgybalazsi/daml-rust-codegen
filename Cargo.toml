@@ -9,7 +9,7 @@ readme = "README.md"
 
 [dependencies]
 prost = { version = "0.14.6", features = ["derive"] }
-zip = "4.3.0"
+zip = "9.6.0"
 anyhow = "1.0.98"
 # Shared Ledger API bindings and Daml type representations from the toolbox.
 ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", rev = "170bbdbcfad857a050b58bebbb182982e81653c0" }
@@ -26,7 +26,7 @@ clap = { version = "4.5.40", features = ["derive"] }
 prost = { version = "0.14.6", features = ["derive"] }
 prost-build = "0.13.5"
 prost-types = "0.13.5"
-zip = "4.3.0"
+zip = "9.6.0"
 
 [features]
 no-generated = []
