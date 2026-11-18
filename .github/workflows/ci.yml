@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # prost-build needs protoc; build.rs also downloads the Daml-LF protos
       # for the version in daml-sdk-version when they don't match.
@@ -31,7 +31,7 @@ jobs:
 
       # Pinned to match rust-toolchain.toml; keep the two in sync when bumping.
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@1.96.0
+        uses: dtolnay/rust-toolchain@1.120.0
         with:
           components: clippy, rustfmt
 
