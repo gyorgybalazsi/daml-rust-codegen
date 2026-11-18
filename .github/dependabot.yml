@@ -15,6 +15,11 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # The rust-toolchain action's tag is the pinned Rust version, kept in sync
+    # with rust-toolchain.toml by hand. Dependabot reads it as an action
+    # version and bumps it to toolchains that don't exist.
+    ignore:
+      - dependency-name: dtolnay/rust-toolchain
     groups:
       github-actions:
         patterns: ["*"]
