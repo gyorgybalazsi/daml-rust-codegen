@@ -73,8 +73,11 @@ pub fn extract_dalfs_from_dar(dar_path: &str) -> Result<(String, Vec<RawDalf>)> 
         let mut entry = zip
             .by_index(i)
             .with_context(|| format!("Failed to read ZIP entry at index {}", i))?;
-        if entry.name().ends_with(".dalf") {
-            let name = entry.name().to_string();
+        let name = entry
+            .name()
+            .with_context(|| format!("Failed to read the name of ZIP entry {}", i))?
+            .into_owned();
+        if name.ends_with(".dalf") {
             let mut bytes = Vec::new();
             entry
                 .read_to_end(&mut bytes)

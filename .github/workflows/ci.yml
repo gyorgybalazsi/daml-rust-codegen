@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # prost-build needs protoc; build.rs also downloads the Daml-LF protos
       # for the version in daml-sdk-version when they don't match.
