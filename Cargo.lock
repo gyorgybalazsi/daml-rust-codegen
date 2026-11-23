@@ -419,7 +419,7 @@ dependencies = [
 [[package]]
 name = "daml-type-rep"
 version = "0.1.0"
-source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?rev=129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49#129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49"
+source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?tag=v0.1.0#6966db77a5b3f0f5b690db73704006c82ad60377"
 dependencies = [
  "chrono",
  "ledger-api",
@@ -847,7 +847,7 @@ checksum = "20870f649af7073d53e38067b2a84312175d56ea15217e1b15bc83506ec50afb"
 [[package]]
 name = "ledger-api"
 version = "0.1.0"
-source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?rev=129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49#129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49"
+source = "git+https://github.com/gyorgybalazsi/canton-event-graph-syncer?tag=v0.1.0#6966db77a5b3f0f5b690db73704006c82ad60377"
 dependencies = [
  "base64 0.23.1",
  "chrono",

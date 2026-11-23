@@ -12,8 +12,8 @@ prost = { version = "0.14.6", features = ["derive"] }
 zip = "9.6.0"
 anyhow = "1.0.98"
 # Shared Ledger API bindings and Daml type representations from the toolbox.
-ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", rev = "129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49" }
-daml-type-rep = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", rev = "129c64263a7e8ee8fd969421cf8b7bdf2e2bbe49" }
+ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", tag = "v0.1.0" }
+daml-type-rep = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", tag = "v0.1.0" }
 proc-macro2 = "1.0.101"
 quote = "1.0.40"
 syn = "3.0.10"

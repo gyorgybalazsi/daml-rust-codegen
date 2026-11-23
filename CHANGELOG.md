@@ -25,8 +25,9 @@ types from Daml DAR packages for use with the Canton Ledger API v2.
 
 ### Changed
 - Daml examples and the Daml-LF protos moved to SDK / Canton 3.7.1.
-- Pinned `ledger-api` and `daml-type-rep` to canton-event-graph-syncer 0.1.0
-  (129c642, tonic 0.14). They were on 170bbdb, from before tonic 0.14.
+- `ledger-api` and `daml-type-rep` are pinned to canton-event-graph-syncer's
+  `v0.1.0` tag (tonic 0.14). They were on commit 170bbdb, from before tonic
+  0.14. The README's example uses the same tag.
 - Updated prost, prost-build and prost-types to 0.14, zip to 9.6, syn to 3 and
   prettyplease to 0.3. A DAR entry whose name can't be read now fails with an
   error naming the entry.
