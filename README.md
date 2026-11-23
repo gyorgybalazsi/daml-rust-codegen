@@ -34,9 +34,9 @@ To use the output, add the crates it depends on to your project:
 
 ```toml
 [dependencies]
-ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
-daml-type-rep = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
-derive-lapi-access = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer" }
+ledger-api = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", tag = "v0.1.0" }
+daml-type-rep = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", tag = "v0.1.0" }
+derive-lapi-access = { git = "https://github.com/gyorgybalazsi/canton-event-graph-syncer", tag = "v0.1.0" }
 serde = { version = "1", features = ["derive"] }
 ```
 
